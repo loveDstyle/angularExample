@@ -8,10 +8,10 @@ import { HeroService } from './hero.service';
   styleUrls:['./dashboard.component.css']
 })
 export class DashboardComponent {
-    heroes: Hero[] = [];
+    heroes: Hero[];
     constructor(private heroService: HeroService) { }
     ngOnInit(): void {
-      this.heroService.getHeroes()
-        .then(heroes => this.heroes = heroes.slice(1, 5));
+      this.heroService.getHeroes().subscribe(
+                                            heroe => this.heroes = heroe);
     }
 }

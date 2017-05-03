@@ -70,7 +70,7 @@ export class HeroesComponent  implements OnInit{
     this.selectedHero = her;
   }
   getHeroes():void{
-    this.heroService.getHeroes().then(aa => this.heros = aa);
+    this.heroService.getHeroes().subscribe(aa => this.heros = aa);
   }
   gotoDetail(): void {
   this.router.navigate(['/detail', this.selectedHero.id]);

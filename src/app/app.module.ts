@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule }   from '@angular/forms'; // <-- NgModel lives here
 import { RouterModule }  from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
+import { HttpModule } from '@angular/http';
 
 import { AppComponent }  from './app.component';
 import { HeroDetailComponent } from './herodetail.component';
@@ -15,6 +16,7 @@ import { HeroService }  from './hero.service';
   imports:      [
             BrowserModule,
             FormsModule,
+            HttpModule,
             AppRoutingModule
             ],
   declarations: [
